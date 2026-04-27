@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Smart Agricultural Advisory Dashboard</h1>
+
+<div class="card">
+    <h2>Enter Farm Conditions</h2>
+
+    <form action="/predict" method="POST">
+        <label>Soil Type</label>
+        <select name="soil">
+            <option>Loamy</option>
+            <option>Sandy</option>
+            <option>Clay</option>
+            <option>Silty</option>
+        </select>
+
+        <label>Temperature (°C)</label>
+        <input type="number" name="temp" required>
+
+        <label>Humidity (%)</label>
+        <input type="number" name="humidity" required>
+
+        <label>Rainfall (mm)</label>
+        <input type="number" name="rainfall" required>
+
+        <button type="submit">Get Smart Recommendation</button>
+    </form>
+</div>
+
+<div class="card">
+    <h2>AI Recommendation Output</h2>
+    {{ result | safe }}
+</div>
+
+{% endblock %}

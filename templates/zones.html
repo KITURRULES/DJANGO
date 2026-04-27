@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Zones | Smart Farm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399') no-repeat center center/cover;
+            min-height:100vh;
+            color:white;
+        }
+
+        .overlay{
+            background: rgba(0,0,0,0.80);
+            min-height:100vh;
+            padding:40px;
+        }
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        }
+
+        header h1{
+            font-weight:600;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            padding:8px 14px;
+            border-radius:6px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#00c853;
+        }
+
+        .zones-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .card{
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius:15px;
+            padding:25px;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.15);
+        }
+
+        .card:hover{
+            transform: translateY(-8px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .card h2{
+            color:#00e676;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            line-height:1.6;
+            font-size:14px;
+            margin-bottom:10px;
+        }
+
+        .badge{
+            display:inline-block;
+            background:#00c853;
+            padding:5px 10px;
+            border-radius:20px;
+            font-size:12px;
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:40px;
+            font-size:13px;
+            opacity:0.8;
+        }
+
+        @media(max-width:768px){
+            header{
+                flex-direction:column;
+                gap:15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+
+    <header>
+        <h1>🌍 What To Plant By Climate Zone</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/zones">Crop Zones</a>
+        </nav>
+    </header>
+
+    <div class="zones-grid">
+        {% for zone, info in zones.items() %}
+        <div class="card">
+            <div class="badge">{{ zone }}</div>
+            <h2>Recommended Crops</h2>
+            <p>{{ info.crops }}</p>
+
+            <h2>Farming Advice</h2>
+            <p>{{ info.advice }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        Smart Agricultural Advisory System • Climate-Smart Farming for Maximum Yield
+    </footer>
+
+</div>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

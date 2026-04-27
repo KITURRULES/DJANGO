@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Farm AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- 🔹 TOP INFO BAR -->
+<div class="top-bar">
+    <div>📍 Nairobi, Kenya</div>
+    <div>📞 +254 700 000000</div>
+    <div>✉ support@smartfarm.ai</div>
+</div>
+
+<!-- 🔹 MAIN NAVIGATION -->
+<nav class="main-nav">
+    <div class="logo">🌱 SmartFarm AI</div>
+    <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/zones">What To Plant</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/logout" class="logout">Logout</a></li>
+    </ul>
+</nav>
+
+<!-- 🔹 SUB NAVIGATION -->
+<div class="sub-nav">
+    <a href="/zones">Arid</a>
+    <a href="/zones">Semi-Arid</a>
+    <a href="/zones">Highland</a>
+    <a href="/zones">Coastal</a>
+    <a href="/predict">AI Recommendation</a>
+</div>
+
+<!-- 🔹 PAGE CONTENT -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

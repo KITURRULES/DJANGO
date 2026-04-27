@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f4f8f2;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#0b5d1e;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:8px 40px;
+    font-size:14px;
+}
+
+/* MAIN NAV */
+.main-nav{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.main-nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.main-nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+.main-nav a:hover{
+    color:#0b5d1e;
+}
+
+.logo{
+    font-weight:600;
+    font-size:20px;
+    color:#0b5d1e;
+}
+
+.logout{
+    color:red;
+}
+
+/* SUB NAV */
+.sub-nav{
+    background:#e8f5e9;
+    padding:10px 40px;
+    display:flex;
+    gap:20px;
+}
+
+.sub-nav a{
+    text-decoration:none;
+    color:#0b5d1e;
+    font-weight:500;
+}
+
+/* CONTENT */
+.content{
+    padding:40px;
+}
+
+/* CARDS */
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.1);
+    margin-bottom:25px;
+}
